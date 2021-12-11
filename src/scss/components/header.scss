@@ -6,6 +6,11 @@
     margin-bottom: rem(50);
     margin-top: rem(125);
 
+    
+    @media (max-width: 405px) {
+        margin-bottom: rem(30);
+    }
+
     h1 {
         font-size: rem(55);
         font-weight: 800;
@@ -13,5 +18,12 @@
         background: linear-gradient(to right, var(--pink) 0%, var(--primary) 100%);
         background-clip: text;
         -webkit-text-fill-color: transparent;
+
+        @media (max-width: 405px) {
+            font-size: rem(27);
+            font-weight: 500;
+            line-height: rem(54);
+        }
     }
+
 }
