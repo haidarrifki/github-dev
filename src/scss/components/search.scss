@@ -1,0 +1,51 @@
+@use '../abstracts/' as *;
+
+.search {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: rem(40);
+
+    .search-container {
+        background-color: var(--bg-color);
+        border: rem(3) solid var(--pink);
+        border-radius: rem(15);
+        height: rem(60);
+        display: flex;
+        overflow: hidden;
+
+        .input-container {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+    
+            input {
+                flex-grow: 1;
+                background-color: transparent;
+                color: white;
+                font-size: rem(22);
+                margin-left: rem(20);
+            }
+    
+            svg {
+                width: rem(25);
+                height: rem(25);
+                color: var(--gray);
+                margin-left: rem(25);
+            }
+    
+        }
+
+        .search-btn {
+            background: linear-gradient(to left, var(--pink), var(--info));
+            width: rem(150);
+            @include centerFlex;
+            font-size: rem(22);
+            cursor: pointer;
+        }
+
+    }
+    
+}
+
+
+

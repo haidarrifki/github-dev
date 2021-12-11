@@ -1,0 +1,14 @@
+@use 'abstracts' as *;
+
+body {
+    background-color: var(--bg-color);
+    color: var(--white);
+}
+
+.container {
+    max-width: rem(850);
+    margin: 0 auto;
+    padding: 0 rem(15);
+    @include centerFlex;
+    flex-direction: column;
+}

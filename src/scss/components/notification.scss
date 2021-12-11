@@ -1,0 +1,42 @@
+.alert {
+    padding: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+
+    &-warning {
+        background-color: rgba(255,171,0,.2);
+        color: #c28200;
+        border: 1px solid #eb9d00;
+    }
+
+    &-primary {
+        background-color: rgba(0,144,231,.2);
+        color: #006db0;
+        border: 1px solid #0084d5;
+    }
+
+    &-danger {
+        background-color: rgba(252,66,74,.2);
+        color: #c03238;
+        border: 1px solid #e83d44;
+    }
+
+    &-info {
+        background-color: rgba(143,95,232,.2);
+        color: #6d48b0;
+        border: 1px solid #8457d5;
+    }
+
+    &-success {
+        background-color: rgba(0,210,91,.2);
+        color: #00a045;
+        border: 1px solid #00c154;
+    }
+
+    &-light {
+        background-color: hsla(0,0%,100%,.2);
+        color: #c2c2c2;
+        border: 1px solid #ebebeb;
+    }
+}

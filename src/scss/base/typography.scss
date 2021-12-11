@@ -1,0 +1,23 @@
+@use 'abstracts' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+
+
+body {
+    font-family: $Roboto-font;
+    font-size: rem(16);
+    font-weight: 400;
+    letter-spacing: rem(1);
+}
+
+h1 {
+    font-size: rem(50);
+}
+
+h2 {
+    font-size: rem(40);
+}
+
+h3 {
+    font-size: rem(30);
+}

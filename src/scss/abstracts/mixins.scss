@@ -1,0 +1,13 @@
+@mixin transition($par) {
+    transition: $par all;
+    -webkit-transition: $par all;
+    -moz-transition: $par all;
+    -ms-transition: $par all;
+    -o-transition: $par all;
+}
+
+@mixin centerFlex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

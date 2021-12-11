@@ -1,0 +1,17 @@
+@use '../abstracts/' as *;
+
+.header {
+    @include centerFlex;
+    flex-direction: column;
+    margin-bottom: rem(50);
+    margin-top: rem(125);
+
+    h1 {
+        font-size: rem(55);
+        font-weight: 800;
+        line-height: rem(64);
+        background: linear-gradient(to right, var(--pink) 0%, var(--primary) 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
