@@ -12,6 +12,10 @@
         border-radius: rem(15);
         display: flex;
         margin-bottom: rem(20);
+
+        @media (max-width: 454px) {
+            flex-direction: column;
+        }
     
         .user-avatar {
             margin-right: rem(30);
@@ -21,6 +25,10 @@
                 height: rem(120);
                 border-radius: 50%;
                 object-fit: cover;
+            }
+
+            @media (max-width: 454px) {
+                margin-bottom: rem(20);
             }
         }
     
@@ -84,16 +92,22 @@
                 flex-wrap: wrap;
                 margin-top: rem(40);
 
+                @media (max-width: 454px) {
+                    flex-direction: column;
+                }
+
                 .contact {
                     display: flex;
                     width: 50%;
                     margin-bottom: rem(15);
     
                     .icon {
-                        width: rem(27);
-                        height: rem(27);
                         margin-right: rem(16);
-                        color: var(--gray);
+                        svg {
+                            width: rem(27);
+                            height: rem(27);
+                            color: var(--gray);
+                        }
                     }
                     span {
                         font-size: rem(18);
