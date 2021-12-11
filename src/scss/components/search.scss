@@ -13,6 +13,11 @@
         display: flex;
         overflow: hidden;
 
+        @media (max-width: 487px) {
+            height: rem(40);
+            border: rem(1) solid var(--pink);
+        }
+
         .input-container {
             flex-grow: 1;
             display: flex;
@@ -24,6 +29,11 @@
                 color: white;
                 font-size: rem(22);
                 margin-left: rem(20);
+
+                @media (max-width: 487px) {
+                    font-size: rem(16);
+                    margin-left: rem(13);
+                }
             }
     
             svg {
@@ -31,6 +41,13 @@
                 height: rem(25);
                 color: var(--gray);
                 margin-left: rem(25);
+
+                @media (max-width: 487px) {
+                    width: rem(19);
+                    height: rem(19);
+                    margin-left: rem(19);
+
+                }
             }
     
         }
@@ -41,6 +58,11 @@
             @include centerFlex;
             font-size: rem(22);
             cursor: pointer;
+            
+            @media (max-width: 487px) {
+                width: rem(100);
+                font-size: rem(16);
+            }
         }
 
     }
