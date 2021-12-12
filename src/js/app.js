@@ -9,8 +9,15 @@ const ui = new UI()
 
 eventlisetner()
 function eventlisetner(e) {
-    searchBtn.addEventListener('click', getData)
+    searchBtn.addEventListener('click', getData);
 }
+
+searchUser.addEventListener('keyup', function(event) {
+    if (event.keyCode == 13) {
+        event.preventDefault();
+        getData(event);
+    }
+})
 
 function getData(e) {
     let username = searchUser.value.trim()

@@ -9,6 +9,16 @@ export class UI {
   }
 
   showUserInfo(user) {
+    let twitter = (user.twitter_username == null) ? "None" : user.twitter_username;
+    let d = new Date(user.created_at);
+    let datestring = ("0" + d.getDate()).slice(-2) + "-" + ("0"+(d.getMonth()+1)).slice(-2) + "-" +
+      d.getFullYear() + " " + ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2);
+
+    let userName = (user.name == null) ? user.login : user.name;
+    let bio = (user.bio == null) ? "Don't have bio" : user.bio;
+    let userLocation = (user.location == null) ? "None" : user.location;
+    let blog = (user.blog == "") ? "None" : user.blog;
+    let company = (user.company == null) ? "None" : user.company;
     this.userProfile.innerHTML = `
         <div class="user-card">
         <div class="user-avatar">
@@ -17,10 +27,10 @@ export class UI {
       </div>
       <div class="user-detail">
         <div class="user-info">
-          <h2 class="name">${user.name}</h2>
-          <div class="user-joined-at">Joined ${user.created_at}</div>
+          <h2 class="name">${userName}</h2>
+          <div class="user-joined-at">Joined at ${datestring}</div>
           <a href="${user.html_url}" target="_blank" class="username">@${user.login}</a>
-          <div class="bio">${user.bio}</div>
+          <div class="bio">${bio}</div>
         </div>
         <div class="user-status">
           <div class="stat">
@@ -49,7 +59,7 @@ export class UI {
                                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                             </svg>
                         </div>
-                        <span>${user.location}</span>
+                        <span>${userLocation}</span>
                     </div>
                     <div class="contact">
                         <div class="icon">
@@ -60,13 +70,13 @@ export class UI {
                                 </path>
                             </svg>
                         </div>
-                        <span>${user.blog}</span>
+                        <span>${blog}</span>
                     </div>
                     <div class="contact">
                         <div class="icon">
                             <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M20 2.799a8.549 8.549 0 01-2.363.647 4.077 4.077 0 001.804-2.266 8.194 8.194 0 01-2.6.993A4.099 4.099 0 009.75 4.977c0 .324.027.637.095.934-3.409-.166-6.425-1.8-8.452-4.288a4.128 4.128 0 00-.56 2.072c0 1.42.73 2.679 1.82 3.408A4.05 4.05 0 01.8 6.598v.045a4.119 4.119 0 003.285 4.028 4.092 4.092 0 01-1.075.135c-.263 0-.528-.015-.776-.07.531 1.624 2.038 2.818 3.831 2.857A8.239 8.239 0 01.981 15.34 7.68 7.68 0 010 15.285a11.543 11.543 0 006.29 1.84c7.545 0 11.67-6.25 11.67-11.667 0-.182-.006-.357-.015-.53A8.18 8.18 0 0020 2.798z"/></svg>
                         </div>
-                        <span>${user.twitter_username}</span>
+                        <span>${twitter}</span>
                     </div>
                     <div class="contact">
                         <div class="icon">
@@ -77,7 +87,7 @@ export class UI {
                                 </path>
                             </svg>
                         </div>
-                        <span>${user.company}</span>
+                        <span>${company}</span>
                     </div>
                 </div>
 
