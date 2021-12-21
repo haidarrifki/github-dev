@@ -11,4 +11,19 @@ body {
     padding: 0 rem(15);
     @include centerFlex;
     flex-direction: column;
+
+    @media(max-width: 775px) {
+        display: none;
+    }
+}
+
+
+.device {
+    margin: 30px auto;
+    padding: 0 rem(15);
+    text-align: center;
+
+    @media(min-width: 775px) {
+        display: none;
+    }
 }
