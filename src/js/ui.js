@@ -9,16 +9,16 @@ export class UI {
   }
 
   showUserInfo(user) {
-    let twitter = (user.twitter_username == null) ? "None" : user.twitter_username;
+    let twitter = (user.twitter_username === null) ? "None" : user.twitter_username;
     let d = new Date(user.created_at);
     let datestring = ("0" + d.getDate()).slice(-2) + "-" + ("0"+(d.getMonth()+1)).slice(-2) + "-" +
       d.getFullYear() + " " + ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2);
 
-    let userName = (user.name == null) ? user.login : user.name;
-    let bio = (user.bio == null) ? "Don't have bio" : user.bio;
-    let userLocation = (user.location == null) ? "None" : user.location;
+    let userName = (user.name === null) ? user.login : user.name;
+    let bio = (user.bio === null) ? "Don't have bio" : user.bio;
+    let userLocation = (user.location === null) ? "None" : user.location;
     let blog = (user.blog == "") ? "None" : user.blog;
-    let company = (user.company == null) ? "None" : user.company;
+    let company = (user.company === null) ? "None" : user.company;
     this.userProfile.innerHTML = `
         <div class="user-card">
         <div class="user-avatar">
