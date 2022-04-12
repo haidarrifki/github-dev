@@ -34,7 +34,7 @@ function getData(e) {
                 ui.showUserInfo(response.user)
                 ui.showRepoInfo(response.repo)
             }
-        }).catch(error => console.log(error))
+        }).catch(error => {})
     }
 
     ui.clearInput()
