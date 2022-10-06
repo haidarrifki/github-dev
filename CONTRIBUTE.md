@@ -27,7 +27,7 @@ Never made an open source contribution before? Wondering how contributions work 
 3. Clone the repository to your local machine using:
 
    ```
-   git clone https://github.com/ziarparvaiz/github-dev.git
+   git clone https://github.com/github-username/repository-name.git.
    ```
 
 4. Add the upstream remote:
@@ -85,3 +85,5 @@ Never made an open source contribution before? Wondering how contributions work 
 ---
 
 ### Thanks for taking the time to contribute! 🌟
+
+<br>
